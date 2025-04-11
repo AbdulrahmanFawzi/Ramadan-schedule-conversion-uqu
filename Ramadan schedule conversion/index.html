@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محول جدول المحاضرات لشهر رمضان - جامعة أم القرى</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>محول جدول المحاضرات لشهر رمضان</h1>
+    <div class="university-name">جامعة أم القرى</div>
+    
+    <div class="ramadan-icon">
+        ☪ ✨
+    </div>
+    
+    <div class="input-section">
+        <div class="student-type">
+            <label>
+                <input type="radio" name="studentType" value="male" checked> طلاب
+            </label>
+            <label>
+                <input type="radio" name="studentType" value="female"> طالبات
+            </label>
+        </div>
+        
+        <h2>أدخل مقرراتك الدراسية</h2>
+
+        <!-- مربع دليل إدخال المقررات المحسن -->
+        <div class="explanation-box">
+            <div class="explanation-title">
+                <i class="fas fa-info-circle"></i> دليل إدخال المقررات
+            </div>
+            <div class="explanation-content">
+                <p>معظم المحاضرات في الجامعة تكون إما:</p>
+                <ul>
+                    <li><strong>فترة واحدة:</strong> مدتها 50 دقيقة (فترة فردية)، مثل الفترة الأولى فقط.</li>
+                    <li><strong>فترتان متتاليتان:</strong> مدتها 100 دقيقة (فترة زوجية)، مثل الفترة الأولى والثانية معاً.</li>
+                </ul>
+                <div class="explanation-example">
+                    <span style="font-weight: bold;">مثال:</span> إذا كانت محاضرتك تبدأ الساعة 8:00 وتنتهي الساعة 9:50، فهي "فترتان متتاليتان".
+                    <br>وإذا كانت تبدأ الساعة 10:00 وتنتهي الساعة 10:50، فهي "فترة واحدة".
+                </div>
+            </div>
+        </div>
+    
+        <p>أضف مقرراتك لكل يوم من أيام الأسبوع:</p>
+        
+        <div class="days-container">
+            <!-- Sunday -->
+            <div class="day-column">
+                <div class="day-title">الأحد</div>
+                <div id="sunday-courses">
+                    <!-- Course inputs will be added here -->
+                </div>
+                <button class="add-btn" onclick="addCourseInput('sunday')">+ إضافة مقرر</button>
+            </div>
+            
+            <!-- Monday -->
+            <div class="day-column">
+                <div class="day-title">الإثنين</div>
+                <div id="monday-courses">
+                    <!-- Course inputs will be added here -->
+                </div>
+                <button class="add-btn" onclick="addCourseInput('monday')">+ إضافة مقرر</button>
+            </div>
+            
+            <!-- Tuesday -->
+            <div class="day-column">
+                <div class="day-title">الثلاثاء</div>
+                <div id="tuesday-courses">
+                    <!-- Course inputs will be added here -->
+                </div>
+                <button class="add-btn" onclick="addCourseInput('tuesday')">+ إضافة مقرر</button>
+            </div>
+            
+            <!-- Wednesday -->
+            <div class="day-column">
+                <div class="day-title">الأربعاء</div>
+                <div id="wednesday-courses">
+                    <!-- Course inputs will be added here -->
+                </div>
+                <button class="add-btn" onclick="addCourseInput('wednesday')">+ إضافة مقرر</button>
+            </div>
+            
+            <!-- Thursday -->
+            <div class="day-column">
+                <div class="day-title">الخميس</div>
+                <div id="thursday-courses">
+                    <!-- Course inputs will be added here -->
+                </div>
+                <button class="add-btn" onclick="addCourseInput('thursday')">+ إضافة مقرر</button>
+            </div>
+        </div>
+        
+        <div class="action-buttons">
+            <button onclick="convertSchedule()">تحويل إلى جدول رمضان</button>
+            <button class="clear-btn" onclick="clearAll()">مسح الكل</button>
+        </div>
+    </div>
+    
+    <div class="result-section" id="result-section" style="display: none;">
+        <h2>جدول رمضان الخاص بك</h2>
+        <table id="ramadan-schedule-grid" class="schedule-grid">
+            <thead>
+                <tr>
+                    <th class="time-column">الوقت</th>
+                    <th>الأحد</th>
+                    <th>الإثنين</th>
+                    <th>الثلاثاء</th>
+                    <th>الأربعاء</th>
+                    <th>الخميس</th>
+                </tr>
+            </thead>
+            <tbody id="schedule-grid-body">
+                <!-- Time slots will be generated here -->
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

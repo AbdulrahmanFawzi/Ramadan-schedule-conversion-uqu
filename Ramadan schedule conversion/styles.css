@@ -1,0 +1,274 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+  background-color: #f8f8f8;
+}
+h1, h2 {
+  text-align: center;
+  color: #0b5e6a;
+}
+h1 {
+  margin-bottom: 10px;
+}
+.university-name {
+  text-align: center;
+  color: #9c7c38;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+.input-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 1px solid #e0e0e0;
+}
+.student-type {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.student-type label {
+  margin: 0 15px;
+  font-weight: bold;
+}
+.days-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.day-column {
+  flex: 1;
+  min-width: 150px;
+}
+.day-title {
+  background-color: #0b5e6a;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.course-input {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+input, select {
+  width: calc(100% - 10px);
+  padding: 8px 5px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+button {
+  background-color: #0b5e6a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin: 20px auto;
+}
+button:hover {
+  background-color: #094854;
+}
+.result-section {
+  margin-top: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 1px solid #e0e0e0;
+}
+.add-btn {
+  background-color: #9c7c38;
+  margin-top: 10px;
+  padding: 5px 10px;
+  width: 100%;
+}
+.add-btn:hover {
+  background-color: #816531;
+}
+.course-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.course-name {
+  flex: 2;
+}
+.course-time {
+  flex: 1;
+}
+.period-selection {
+  margin-bottom: 10px;
+}
+.period-container {
+  display: flex;
+  gap: 10px;
+}
+.period-one, .period-two {
+  flex: 1;
+}
+.clear-btn {
+  background-color: #e74c3c;
+  margin-right: 10px;
+}
+.clear-btn:hover {
+  background-color: #c0392b;
+}
+.action-buttons {
+  display: flex;
+  justify-content: center;
+}
+.ramadan-icon {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 24px;
+  color: #9c7c38;
+}
+
+/* New styles for grid-like timetable */
+.schedule-grid {
+  width: 100%;
+  border-collapse: collapse;
+  direction: rtl;
+}
+.schedule-grid th, .schedule-grid td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+}
+.schedule-grid th {
+  background-color: #0b5e6a;
+  color: white;
+  font-weight: bold;
+}
+.time-column {
+  width: 100px;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+.course-cell {
+  min-height: 60px;
+  padding: 5px;
+  position: relative;
+}
+.course-type {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: white;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 0.8em;
+}
+
+.course-bubble {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  color: white;
+}
+
+.lecture-theory {
+  background-color: #1e88e5; /* Blue for theory */
+}
+
+.lecture-practical {
+  background-color: #26a69a; /* Green for practical */
+}
+
+.course-bubble-text {
+  padding-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.course-type-tag {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  background-color: white;
+  color: #333;
+  padding: 0px 6px;
+  border-radius: 10px;
+  font-size: 0.8em;
+}
+
+.no-courses {
+  background-color: #f9f9f9;
+}
+
+.course-type-select {
+  margin-top: 5px;
+  width: 100%;
+}
+
+/* بداية تنسيق مربع دليل إدخال المقررات الجديد */
+.explanation-box {
+  background-color: #f8f7f2;
+  border: 2px solid #9c7c38;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.explanation-title {
+  color: #0b5e6a;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #9c7c38;
+  padding-bottom: 5px;
+}
+
+.explanation-content {
+  font-size: 16px;
+}
+
+.explanation-content ul {
+  padding-right: 20px;
+  margin: 10px 0;
+}
+
+.explanation-content li {
+  margin-bottom: 8px;
+}
+
+.explanation-example {
+  background-color: #e8f4f5;
+  border-right: 4px solid #0b5e6a;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 4px;
+}
+/* نهاية تنسيق مربع دليل إدخال المقررات الجديد */
+
+@media (max-width: 768px) {
+  .days-container {
+      flex-direction: column;
+  }
+  .day-column {
+      width: 100%;
+  }
+  .schedule-grid th, .schedule-grid td {
+      padding: 5px;
+      font-size: 0.9em;
+  }
+}
